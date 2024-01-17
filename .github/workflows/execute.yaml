@@ -46,6 +46,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         args: >
-          -Dsonar.projectKey=mahidharigs
+          -Dsonar.projectKey=Mahidharigs_Calculator
           -Dsonar.organization=Mahidharigs
           
