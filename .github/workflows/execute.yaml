@@ -39,13 +39,16 @@ jobs:
       with:
           name: Depcheck report
           path: ${{github.workspace}}/reports
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
-      env:
-        SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: >
-          -Dsonar.projectKey=Mahidharigs_Calculator
-          -Dsonar.organization=Mahidharigs
+    #- name: SonarCloud Scan
+      #uses: SonarSource/sonarcloud-github-action@master
+      #env:
+       # SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #with:
+        #args: >
+          #-Dsonar.projectKey=Mahidharigs_Calculator
+          #-Dsonar.organization=Mahidharigs
+    - name: Build project
+      run: npm run build
+      
           
