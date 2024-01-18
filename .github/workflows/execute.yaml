@@ -65,6 +65,8 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: mahidharigs/calculator:calc
-        
+    - name: Run Docker image
+      run: |
+          docker run --name myapp -d -p 80:80 mahidharigs/calculator:calc
       
           
