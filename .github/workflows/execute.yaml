@@ -64,6 +64,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: mahidharigs/Calculator:calc
+        tags: mahidharigs/calculator:calc
       
           
