@@ -4,8 +4,7 @@
   "description": "",
   "main": "calculator.js",
   "scripts": {
-    "test": "jest",
-    "build": "your-build-command"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
