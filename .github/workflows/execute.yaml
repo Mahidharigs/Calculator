@@ -48,7 +48,7 @@ jobs:
         #args: >
           #-Dsonar.projectKey=Mahidharigs_Calculator
           #-Dsonar.organization=Mahidharigs
-    - name: Build project
-      run: npm run build
+   # - name: Build project
+     # run: npm run build
       
           
