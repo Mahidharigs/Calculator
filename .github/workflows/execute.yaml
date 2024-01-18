@@ -62,7 +62,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: Calculator
+        file: ./Dockerfile
         push: true
         tags: mahidharigs/calculator:calc
         
