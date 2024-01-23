@@ -47,17 +47,7 @@ jobs:
       run: ./sl analyze --app calculator --wait --cpg
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
-    #- name: SonarCloud Scan
-      #uses: SonarSource/sonarcloud-github-action@master
-      #env:
-       # SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #with:
-        #args: >
-          #-Dsonar.projectKey=Mahidharigs_Calculator
-          #-Dsonar.organization=Mahidharigs
-   # - name: Build project
-     # run: npm run build
+        
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
