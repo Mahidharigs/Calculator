@@ -68,6 +68,18 @@ jobs:
     - name: Run Docker image
       run: |
           docker run --name myapp -d -p 80:80 mahidharigs/calculator:calc
+    - name: Log in to Azure Container Registry
+      uses: azure/docker-login@v1
+      with:
+          login-server: calculatorigs.azurecr.io
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+    - name: Build and push an image to Azure Container Registry
+      run: |
+          docker build . -t calculatorigs.azurecr.io/calc:${{ github.sha }}
+          docker push calculatorigs.azurecr.io/calc:${{ github.sha }}
+    
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
       with:
