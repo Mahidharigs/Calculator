@@ -79,7 +79,7 @@ jobs:
       run: |
           docker build . -t calculatorigs.azurecr.io/calc:${{ github.sha }}
           docker push calculatorigs.azurecr.io/calc:${{ github.sha }}
-    
+          docker run --name myapp -d -p 3000:3000 calculatorigs.azurecr.io/calc
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
       with:
