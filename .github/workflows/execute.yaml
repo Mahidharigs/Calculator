@@ -68,6 +68,14 @@ jobs:
     - name: Run Docker image
       run: |
           docker run --name myapp -d -p 80:80 mahidharigs/calculator:calc
+    - name: Deploy to Azure App Service
+      uses: azure/webapps-deploy@v2
+      with:
+          app-name: 'calculator'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: 'mahidharigs/calculator:calc'
+
           
       
           
