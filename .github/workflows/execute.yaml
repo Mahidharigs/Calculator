@@ -77,8 +77,8 @@ jobs:
 
     - name: Build and push an image to Azure Container Registry
       run: |
-          docker build . -t calculatorazure.azurecr.io/calculator:calc${{ github.sha }}
-          docker push calculatorazure.azurecr.io/calculatorcalc${{ github.sha }}
+          docker build . -t calculatorazure.azurecr.io/calculator:calc
+          docker push calculatorazure.azurecr.io/calculator:calc
      # - name: Deploy to Azure App Service
      # uses: azure/webapps-deploy@v2
      # with:
